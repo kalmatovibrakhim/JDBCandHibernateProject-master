@@ -14,7 +14,7 @@ public class Util {
         Connection conn=null;
         try {
             conn = DriverManager.getConnection(URL,USERNAME,PASSWORD);
-            System.out.println("Successfully connected");
+//            System.out.println("Successfully connected");
         }catch (SQLException e){
             e.printStackTrace();
         }

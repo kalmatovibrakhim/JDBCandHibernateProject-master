@@ -10,11 +10,11 @@ public class App
         UserDaoJdbcImpl userDao = new UserDaoJdbcImpl();
 //        userDao.createUsersTable();
 //        userDao.dropUsersTable();
-//        userDao.saveUser("ibo","kalmatov", (byte) 26);
-//        userDao.saveUser("ser","sernek", (byte) 23);
-//        userDao.saveUser("manas","manasov", (byte) 25);
+        userDao.saveUser("ibo","kalmatov", (byte) 26);
+        userDao.saveUser("ser","sernek", (byte) 23);
+        userDao.saveUser("manas","manasov", (byte) 25);
 //        userDao.removeUserById(1);
-        userDao.cleanUsersTable();
+//        userDao.cleanUsersTable();
         System.out.println(userDao.getAllUsers());
 
     }
