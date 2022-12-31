@@ -24,6 +24,7 @@ public class UserDaoJdbcImpl implements UserDao {
         try (Connection conn = Util.connection();
              Statement statement = conn.createStatement()){
             statement.executeUpdate(SQL);
+            System.out.println("Table successfully created");
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -34,6 +35,7 @@ public class UserDaoJdbcImpl implements UserDao {
         try (Connection conn = Util.connection();
              Statement statement = conn.createStatement()){
             statement.executeUpdate(SQL);
+            System.out.println("Table successfully dropped");
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -60,6 +62,7 @@ public class UserDaoJdbcImpl implements UserDao {
         PreparedStatement statement = conn.prepareStatement(SQL)){
             statement.setInt(1, (int) id);
             statement.executeUpdate();
+            System.out.println("User with ID *"+id +" successfully removed");
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -91,6 +94,7 @@ public class UserDaoJdbcImpl implements UserDao {
         try (Connection conn = Util.connection();
              Statement statement = conn.createStatement()){
             statement.executeUpdate(SQL);
+            System.out.println("Table successfully cleaned");
         }catch (SQLException e){
             e.printStackTrace();
         }
